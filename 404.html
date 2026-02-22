@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Your App</title>
+  <script type="text/javascript">
+    // Single Page Apps for GitHub Pages
+    // https://github.com/rafgraph/spa-github-pages
+    // MIT license https://github.com/rafgraph/spa-github-pages/blob/master/LICENSE
+    (function(l) {
+      if (['standalone', 'minimal-ui', 'a2hs'].indexOf(l.getAttribute('manifest')) !== -1) {
+        return;
+      }
+      var q = l.search;
+      var hash = l.hash;
+      var cleanPath = l.pathname.replace(/^\/+/, '/');
+      if (cleanPath === '/' || cleanPath === '/index.html') {
+        return;
+      }
+      if (q !== '' && q !== '?') {
+        var i = q.indexOf('?');
+        q = (i === -1) ? '?' + q.substring(1) : q.substring(0, i);
+      }
+      l.replace(
+        l.protocol + '//' + l.host + cleanPath + q + hash
+      );
+    })(window.location);
+  </script>
+</head>
+<body>
+  <!-- Your index.html body content here, or empty to load Flutter -->
+</body>
+</html>
