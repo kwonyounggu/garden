@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script type="text/javascript">
+      (function () {
+        // Always send the browser back to the root, where index.html lives.
+        // GoRouter + usePathUrlStrategy() will parse the path and show /study.
+        var l = window.location;
+        var path = l.pathname || "/";
+        // For a custom domain (webmonster.ca) with the app at the root,
+        // just reload "/" – Flutter will handle the route.
+        if (path !== "/") {
+          l.replace(l.protocol + "//" + l.host + "/" + l.search + l.hash);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    Redirecting…
+  </body>
+</html>
